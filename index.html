@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Sweetest Maitri 🍫💖</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #3e2723;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 28px;
+            margin-top: 50px;
+        }
+        #choco-message {
+            font-size: 20px;
+            margin: 20px;
+            padding: 10px;
+            background: #5d4037;
+            border-radius: 10px;
+            display: none; /* Initially hidden */
+        }
+        .choco-bar {
+            width: 100px;
+            height: 50px;
+            background: #8B4513;
+            margin: 20px auto;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .melt {
+            width: 100%;
+            height: 100%;
+            background: #d2691e;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: melt 2.5s infinite alternate;
+        }
+        @keyframes melt {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(10px); opacity: 0.8; }
+        }
+        button {
+            padding: 10px 20px;
+            background: #ffcc80;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ffb74d;
+        }
+        #bite-btn {
+            display: none; /* Hide "Take a Bite" button initially */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Chocolate Day Special, My Love! 🍫💖</h1>
+
+    <button onclick="revealMessage()">Tap to Reveal 🍫</button>
+
+    <p id="choco-message">
+        Just like chocolate, you make my life sweeter, richer, and absolutely irresistible!  
+        Every moment with you melts my heart in the best way possible.   
+       
+    </p>
+   <h2>You're my sweetest happiness, always & forever! 😘💖  </h2>
+
+    <div class="choco-bar" id="choco-bar">
+        <div class="melt"></div>
+    </div>
+
+    <button id="bite-btn" onclick="takeBite()">Take a Bite 🍫</button>
+
+    <p id="final-message" style="display: none;">💖 Oops! The chocolate is gone, but my love for you will never melt away! I Love you 💖</p>
+
+    <script>
+        function revealMessage() {
+            document.getElementById("choco-message").style.display = "block";
+            document.getElementById("bite-btn").style.display = "inline-block";
+        }
+
+        function takeBite() {
+            document.getElementById("choco-bar").style.display = "none";
+            document.getElementById("final-message").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
